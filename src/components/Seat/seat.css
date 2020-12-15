@@ -1,0 +1,33 @@
+.seat{
+    font-size: 3rem;
+    text-align: center;
+}
+.seats div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.booked-m svg{
+    color: darkorchid;
+}
+
+.booked-f svg{
+    color: rgb(247, 0, 255);
+
+}
+.blocked svg{
+    color: rgb(24, 24, 24);
+}
+.available svg{
+    color: rgb(204, 203, 203);
+}
+.selected svg{
+    color: greenyellow;
+}
+.sold-m svg{
+    color: indianred;
+}
+.sold-f svg{
+    color: rgb(205, 92, 167);
+}

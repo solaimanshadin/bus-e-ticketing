@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { createContext, useEffect } from 'react';
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBar';
+import SearchResults from './components/SearchResults/SearchResults';
+
+interface Booking {
+  busId: number;
+  seatNumber: string;
+  gender: string;
+}
+export interface BookingContextData {
+  bookings: Booking[];
+}
+export const BookingContextDefaultValue: BookingContextData = {
+  bookings: []
+}
+ 
+export const PostsContext = createContext<BookingContextData>(BookingContextDefaultValue);
 
 function App() {
+  // useEffect(() => {
+  //   const olderBookings: any = localStorage.getItem('bookings');
+  //   const parsedOldBookings: any = (olderBookings && JSON.parse(olderBookings)) || [];
+
+  // }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PostsContext.Provider value={BookingContextDefaultValue} >
+      <SearchBar />
+      <SearchResults />
+    </PostsContext.Provider>
   );
 }
 

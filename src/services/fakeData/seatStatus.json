@@ -1,0 +1,31 @@
+[
+    {
+        "id" : "booked-m",
+        "type" : "Booked (M)"
+    },
+    {
+        "id" : "booked-f",
+        "type" : "Booked (F)"
+    },
+    {
+        "id" : "blocked",
+        "type" : "Blocked"
+    },
+    {
+        "id" : "available",
+        "type" : "Available"
+    },
+    {
+        "id" : "selected",
+        "type" : "Selected"
+    },
+    {
+        "id" : "sold-m",
+        "type" : "Sold (M)"
+    },
+    {
+        "id" : "sold-f",
+        "type" : "Sold (F)"
+    }
+
+]

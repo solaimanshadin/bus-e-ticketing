@@ -1,0 +1,35 @@
+.seats{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 3rem;
+}
+.specs .col-md-2,
+.specs .text-left
+{
+    border-right: 2px dotted #eee;
+    height: 100%;
+    text-align: center;
+    line-height: 18px;
+}
+.seat-symbols{
+    border-top: 3px dotted #a0a0a0;
+    text-transform: uppercase;
+}
+.seat-symbols .symbol{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    flex-wrap: wrap;
+}
+.seat-symbols .symbol svg{
+    font-size: 3rem;
+    margin-right: 5px;
+}
+
+.seat-plan{
+    border: 2px solid dimgray;
+}
+.diver-area{
+    font-size: 3rem;
+    border-bottom: 1px solid dimgray;
+}

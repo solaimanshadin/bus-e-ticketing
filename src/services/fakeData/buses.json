@@ -1,0 +1,399 @@
+[
+   
+    {
+        "name" : "Green Line",
+        "id" : "201-DKH-KHU",
+        "type" : "Non AC",
+        "startingPoint" : "Gulisthan",
+        "endPoint" : "RoyalChatter",
+        "departureTime" : "6:15AM",
+        "arrivalTime" : "11:35AM",
+        "ticketPrice" : 500.00,
+        "seats" : [
+            {
+                "seatNumber" : "A-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "A-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "B-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "B-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "C-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "C-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "D-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "D-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "E-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "E-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "F-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "F-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "G-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "G-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "H-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "H-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "I-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "I-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "J-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "J-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "K-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "K-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "L-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "L-",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            }
+        ]
+    },
+    {
+        "name" : "Falguni Modhunoti Paribahan",
+        "id" : "202-DKH-KHU",
+        "type" : "Non AC",
+        "startingPoint" : "Gulisthan",
+        "endPoint" : "RoyalChatter",
+        "departureTime" : "6:15AM",
+        "arrivalTime" : "11:35AM",
+        "ticketPrice" : 500.00,
+        "seats" : [
+            {
+                "seatNumber" : "A-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "A-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "B-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "B-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "C-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "C-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "D-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "D-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "E-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "E-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "F-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "F-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "G-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "G-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "H-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "H-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "I-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "I-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "J-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "J-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "K-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "K-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "L-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "L-",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            }
+        ]
+    },
+    {
+        "name" : "Sonya Paribahan",
+        "id" : "203-DKH-KHU",
+        "type" : "AC",
+        "startingPoint" : "Gulisthan",
+        "endPoint" : "RoyalChatter",
+        "departureTime" : "6:15AM",
+        "arrivalTime" : "11:35AM",
+        "ticketPrice" : 500.00,
+        "seats" : [
+            {
+                "seatNumber" : "A-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "A-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "B-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "B-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "C-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "C-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "D-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "D-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "E-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "E-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "F-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "F-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "G-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "G-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "H-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "H-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "I-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "I-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "J-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "J-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "K-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "K-2",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "L-1",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            },
+            {
+                "seatNumber" : "L-",
+                "seatClass" : "E-CLASS",
+                "fare" : 500.00
+            }
+        ]
+    }
+]
