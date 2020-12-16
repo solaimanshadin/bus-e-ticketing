@@ -1,27 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { interval } from 'rxjs';
-import {
-    scan,
-    share,
-    startWith,
-    takeWhile
-} from 'rxjs/operators';
 import Swal from 'sweetalert2';
+import { BookingContext } from '../../App';
 
 interface Props {
     busId: string,
     seatNumber: string
 }
-
-const observable$ = interval(1000 * 60 * 10).pipe(
-    startWith(1000 * 60 * 10),
-    scan(time => time - 1),
-    takeWhile(time => time > 0)
-)
-    .pipe(share());
-
-
 
 const BookingModal: React.FC<Props> = ({ busId, seatNumber }) => {
 
@@ -29,6 +14,7 @@ const BookingModal: React.FC<Props> = ({ busId, seatNumber }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [formData, setFormData] = useState({ name: "", email: "", gender: "" })
+    const { bookSeat } = useContext(BookingContext);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -38,27 +24,24 @@ const BookingModal: React.FC<Props> = ({ busId, seatNumber }) => {
     const parsedOldBookings: any = (olderBookings && JSON.parse(olderBookings)) || [];
 
     const seatPairNumber = seatNumber?.split('-')[0];
-    useEffect(() => {
-        observable$.subscribe();
-    }, [])
 
     const makeBooking = () => {
         const genderMismatch: any = parsedOldBookings.find((booking: any) => {
             return booking.seatNumber.includes(seatPairNumber) && booking.gender === 'female' && formData.gender !== 'female'
         })
-
-        if (genderMismatch) {
+        const validEmailPattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+        
+        if(!validEmailPattern.test(formData.email) ) {
+            return Swal.fire("", 'Valid Email address required!', 'info')
+        }else if(!formData.gender) {
+            return Swal.fire("", 'Gender filed is mandatory!', 'info')
+        }else if (genderMismatch) {
             handleClose()
             return Swal.fire("Can't Book the seat", '', 'error')
         }
-        const sub: any = observable$.subscribe(() => localStorage.setItem('bookings', olderBookings));
-        const newBookingArr: any = [...parsedOldBookings, { busId, seatNumber, gender: formData.gender }];
-        localStorage.setItem('bookings', JSON.stringify(newBookingArr));
         handleClose();
-
-        Swal.fire('Booing Successful', '', 'success')
-
-        return () => sub.unsubscribe()
+        bookSeat(busId, seatNumber, formData.gender)
+        
     }
     return (
         <div>
@@ -82,11 +65,11 @@ const BookingModal: React.FC<Props> = ({ busId, seatNumber }) => {
                 <Modal.Body>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Name</label>
-                        <input onChange={handleChange} type="name" className="form-control" placeholder="Enter Name" />
+                        <input onChange={handleChange} type="name" name="name" className="form-control" placeholder="Enter Name" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputPassword1">Email</label>
-                        <input type="email" className="form-control" placeholder="Enter Email" />
+                        <input onChange={handleChange}  type="email" name="email" className="form-control" placeholder="Enter Email" />
                     </div>
                     <div className="gender-selection">
                         <div>

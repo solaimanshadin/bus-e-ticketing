@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Swal from 'sweetalert2';
+import { BookingContext } from '../../App';
 import './searchBar.css';
 
-interface SearchQuerySchema {
-    from: string,
-    to: string,
-    journeyDate: string,
-    returnDate: string,
-}
 
 const SearchBarReact: React.FC = () => {
 
-    const [searchQuery, setSearchQuery] = useState<SearchQuerySchema | {}>({});
     const [districts, setDistricts] = useState([]);
+    const { makeSearch } = useContext(BookingContext);
+    const [formData, setFormData] = useState({ name: "", email: "", gender: "" })
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
 
     useEffect(() => {
         fetch('https://api.allorigins.win/raw?url=https://bdapis.herokuapp.com/api/v1.0/districts')
@@ -23,7 +22,8 @@ const SearchBarReact: React.FC = () => {
     }, [])
 
     const handleSubmit = (e: any) => {
-        e.preventDefault()
+        e.preventDefault();
+        makeSearch(formData)
     }
     return (
         <div className="search-bar my-5">
@@ -32,7 +32,7 @@ const SearchBarReact: React.FC = () => {
                     <form className="form-inline justify-content-center">
                         <div className="form-group mb-2">
                             <label htmlFor="from">From</label>
-                            <select className="form-control" >
+                            <select    name="from" className="form-control" >
                                 {
                                     districts.map((d:any) => (
                                         <option
@@ -47,7 +47,7 @@ const SearchBarReact: React.FC = () => {
                         </div>
                         <div className="form-group mx-sm-3 mb-2">
                             <label htmlFor="to">To</label>
-                            <select className="form-control" >
+                            <select  name="to" className="form-control" >
                                 {
                                     districts.map((d:any) => (
                                         <option
@@ -63,11 +63,11 @@ const SearchBarReact: React.FC = () => {
                         </div>
                         <div className="form-group mb-2">
                             <label htmlFor="from">Journey Date</label>
-                            <input type="date" className="form-control" name="from" />
+                            <input onChange={handleChange} name="journeyDate" type="date" className="form-control"  />
                         </div>
                         <div className="form-group mx-sm-3 mb-2">
                             <label htmlFor="to">Return Date (optional)</label>
-                            <input type="date" name="to" className="form-control" />
+                            <input onChange={handleChange} name="endDate"  type="date"  className="form-control" />
                         </div>
                         <button
                             onClick={handleSubmit}

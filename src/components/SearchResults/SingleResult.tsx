@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Seat from '../Seat/Seat';
 import './singleResult.css';
 import { RiSteering2Fill } from 'react-icons/ri';
 import { MdEventSeat } from 'react-icons/md';
 import seatStatus from '../../services/fakeData/seatStatus.json';
 import SeatInfo from '../SeatInfo/SeatInfo';
+import { BookingContext } from '../../App';
 
 export interface SeatObj {
     seatNumber: string,
@@ -45,14 +46,15 @@ const SingleResult: React.FC<Props> = (props) => {
         fare: 0,
         seatClass: ""
     });
+    const { bookings } = useContext(BookingContext);
+
 
     const seatSelector = (seat: SeatObj) => {
         setSelectedSeat(seat)
-        console.log("SeatSelector", seat)
     }
-    const olderBookings: any = localStorage.getItem('bookings');
-    const parsedOldBookings: any = (olderBookings && JSON.parse(olderBookings)) || [];
-    const bookingListOfTheBus: any = parsedOldBookings.filter((booking:any) => booking.busId === id)
+ 
+    const bookingListOfTheBus: any = bookings.filter((booking:any) => booking.busId === id)
+    
     return (
         <div className="bg-white p-4 mb-2">
             <div className="row align-items-center specs">
@@ -72,7 +74,7 @@ const SingleResult: React.FC<Props> = (props) => {
                 </div>
                 <div className="col-md-2">
                     <p>Seat Available</p>
-                    <h6 className="text-danger">{10}</h6>
+                    <h6 className="text-danger">{seats.length - bookingListOfTheBus.length}</h6>
                 </div>
                 <div className="col-md-3">
                     <div className="d-flex justify-content-between">
